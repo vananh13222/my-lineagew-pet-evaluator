@@ -227,7 +227,7 @@
                                 </div>
                             </div>
 
-                            <h3>🎯 寵物基礎數據</h3>
+                            <h3>🎯 Dữ liệu cơ bản thú cưng</h3>
                             <table class="base-table">
                                 <tr>
                                     <th>Thú cưng</th>
@@ -237,28 +237,28 @@
                                     <th>Thể lực</th>
                                 </tr>
                                 <tr>
-                                    <td><img src="wolf.png" alt="狼" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 5px; vertical-align: middle;"> 狼</td>
+                                    <td><img src="wolf.png" alt="Sói" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 5px; vertical-align: middle;"> Sói</td>
                                     <td>6</td>
                                     <td>6</td>
                                     <td>6</td>
                                     <td><strong>14</strong></td>
                                 </tr>
                                 <tr>
-                                    <td><img src="dubin.png" alt="杜賓狗" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 5px; vertical-align: middle;"> 杜賓狗</td>
+                                    <td><img src="dubin.png" alt="Doberman" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 5px; vertical-align: middle;"> Doberman</td>
                                     <td>6</td>
                                     <td><strong>14</strong></td>
                                     <td>6</td>
                                     <td>6</td>
                                 </tr>
                                 <tr>
-                                    <td><img src="sheepdog.png" alt="牧羊犬" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 5px; vertical-align: middle;"> 牧羊犬</td>
+                                    <td><img src="sheepdog.png" alt="Chó chăn cừu" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 5px; vertical-align: middle;"> Chó chăn cừu</td>
                                     <td><strong>14</strong></td>
                                     <td>6</td>
                                     <td>6</td>
                                     <td>6</td>
                                 </tr>
                                 <tr>
-                                    <td><img src="beagle.png" alt="小獵犬" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 5px; vertical-align: middle;"> 小獵犬</td>
+                                    <td><img src="beagle.png" alt="Beagle" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 5px; vertical-align: middle;"> Beagle</td>
                                     <td>6</td>
                                     <td>6</td>
                                     <td><strong>14</strong></td>
@@ -271,31 +271,31 @@
                         <div class="help-tab-content" id="calculation-tab">
                             <h3>🧮 Nguyên lý tính toán</h3>
                             <div class="calc-section">
-                                <h4>升級機率</h4>
+                                <h4>Xác suất lên cấp</h4>
                                 <div class="probability-section">
                                     <div class="prob-item">
-                                        <strong>主屬性：</strong>+1(5%), +2(15%), +3(30%), +4(20%), +5(15%), +6(10%), +7(5%)
-                                        <br><small>預期值：每級 +3.75 點</small>
+                                        <strong>Thuộc tính chính:</strong> +1(5%), +2(15%), +3(30%), +4(20%), +5(15%), +6(10%), +7(5%)
+                                        <br><small>Giá trị dự kiến: Mỗi cấp +3.75 điểm</small>
                                     </div>
                                     <div class="prob-item">
-                                        <strong>副屬性：</strong>+0(15%), +1(50%), +2(30%), +3(5%)
-                                        <br><small>預期值：每級 +1.25 點</small>
+                                        <strong>Thuộc tính phụ:</strong> +0(15%), +1(50%), +2(30%), +3(5%)
+                                        <br><small>Giá trị dự kiến: Mỗi cấp +1.25 điểm</small>
                                     </div>
                                 </div>
                                 
-                                <h4>評分公式</h4>
+                                <h4>Công thức đánh giá</h4>
                                 <div class="formula">
                                     <div class="formula-step">
-                                        <strong>1. 計算預期值</strong><br>
-                                        預期值 = 基礎值 + (等級-1) × 每級預期成長
+                                        <strong>1. Tính giá trị dự kiến</strong><br>
+                                        Giá trị dự kiến = Giá trị cơ bản + (Cấp-1) × Tăng trưởng dự kiến mỗi cấp
                                     </div>
                                     <div class="formula-step">
-                                        <strong>2. 計算成長率</strong><br>
-                                        成長率 = (當前值 - 基礎值) ÷ (預期值 - 基礎值)
+                                        <strong>2. Tính tỷ lệ tăng trưởng</strong><br>
+                                        Tỷ lệ tăng trưởng = (Giá trị hiện tại - Giá trị cơ bản) ÷ (Giá trị dự kiến - Giá trị cơ bản)
                                     </div>
                                     <div class="formula-step">
-                                        <strong>3. 主屬性加權</strong><br>
-                                        主屬性分數 × 1.5 倍加權
+                                        <strong>3. Trọng số thuộc tính chính</strong><br>
+                                        Điểm thuộc tính chính × 1.5 lần trọng số
                                     </div>
                                 </div>
                             </div>
@@ -344,22 +344,22 @@
                             </div>
 
                             <div class="bonus-info">
-                                <h4>💡 評分說明</h4>
+                                <h4>💡 Giải thích điểm</h4>
                                 <ul>
-                                    <li><strong>預期值 (100%)：</strong>根據升級機率計算的平均成長表現</li>
-                                    <li><strong>評分邏輯：</strong>以預期值為基準，評估寵物實際成長相對於理論平均值的表現</li>
-                                    <li><strong>主屬性加權：</strong>主屬性評分 × 1.5 倍，更重視寵物的主要特性</li>
-                                    <li><strong>整體評價：</strong>綜合所有屬性的加權平均分數</li>
-                                    <li><strong>「待加強」：</strong>明確提示該寵物需要更多投入或考慮替換</li>
+                                    <li><strong>Giá trị dự kiến (100%):</strong> Hiệu suất tăng trưởng trung bình tính theo xác suất lên cấp</li>
+                                    <li><strong>Logic đánh giá:</strong> Dựa vào giá trị dự kiến, đánh giá hiệu suất tăng trưởng thực tế so với giá trị lý thuyết trung bình</li>
+                                    <li><strong>Trọng số thuộc tính chính:</strong> Điểm thuộc tính chính × 1.5 lần, ưu tiên hơn đặc tính chính của thú</li>
+                                    <li><strong>Đánh giá tổng thể:</strong> Tổng hợp điểm trọng số trung bình của tất cả các thuộc tính</li>
+                                    <li><strong>「Cần cải thiện」:</strong> Cảnh báo rõ ràng rằng thú cưng cần nhiều đầu tư hơn hoặc cân nhắc thay thế</li>
                                 </ul>
 
-                                <h4>💪 角色加成效果</h4>
+                                <h4>💪 Hiệu ứng nhân vật</h4>
                                 <ul>
-                                    <li><strong>忍耐力：</strong>每5點 = +1物理防禦</li>
-                                    <li><strong>忠誠心：</strong>每5點 = +1近/遠/魔命中</li>
-                                    <li><strong>速度：</strong>每10點 = +1近/遠迴避</li>
-                                    <li><strong>體力：</strong>每1點 = +30HP</li>
-                                    <li><strong>積極性：</strong>影響攻擊積極度，固定為3</li>
+                                    <li><strong>Sức bền:</strong> Mỗi 5 điểm = +1 phòng thủ vật lý</li>
+                                    <li><strong>Trung thành:</strong> Mỗi 5 điểm = +1 chính xác (cận/xa/phép)</li>
+                                    <li><strong>Tốc độ:</strong> Mỗi 10 điểm = +1 né tránh (cận/xa)</li>
+                                    <li><strong>Thể lực:</strong> Mỗi 1 điểm = +30 HP</li>
+                                    <li><strong>Tính tích cực:</strong> Ảnh hưởng mức độ tích cực tấn công, cố định ở 3</li>
                                 </ul>
                             </div>
                         </div>
