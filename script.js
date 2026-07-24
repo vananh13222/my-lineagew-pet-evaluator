@@ -1,7 +1,7 @@
 // 寵物基礎數據
 const petData = {
     wolf: {
-        name: '狼',
+        name: 'Sói',
         emoji: '🐺',
         image: 'wolf.png',
         mainStat: 'hp',
@@ -14,7 +14,7 @@ const petData = {
         }
     },
     dog: {
-        name: '杜賓狗',
+        name: 'Doberman',
         emoji: '🐕',
         image: 'dubin.png',
         mainStat: 'loyalty',
@@ -27,7 +27,7 @@ const petData = {
         }
     },
     shepherd: {
-        name: '牧羊犬',
+        name: 'Chó chăn cừu',
         emoji: '🐕‍🦺',
         image: 'sheepdog.png',
         mainStat: 'endurance',
@@ -40,7 +40,7 @@ const petData = {
         }
     },
     hound: {
-        name: '小獵犬',
+        name: 'Beagle',
         emoji: '🐶',
         image: 'beagle.png',
         mainStat: 'speed',
@@ -75,11 +75,11 @@ const upgradeRates = {
 
 // 屬性名稱對應
 const statNames = {
-    endurance: '忍耐力',
-    loyalty: '忠誠心',
-    speed: '速度',
-    aggressiveness: '積極性',
-    hp: '體力'
+    endurance: 'Sức bền',
+    loyalty: 'Trung thành',
+    speed: 'Tốc độ',
+    aggressiveness: 'Tính tích cực',
+    hp: 'Thể lực'
 };
 
 // 現代通知系統
@@ -89,7 +89,7 @@ function showNotification(message, type = 'warning') {
     notification.className = `notification ${type}`;
     notification.innerHTML = `
         <span>${message}</span>
-        <button class="notification-close" aria-label="關閉通知">&times;</button>
+        <button class="notification-close" aria-label="Đóng thông báo">&times;</button>
     `;
     
     // 添加到頁面
@@ -252,7 +252,7 @@ function updateBaseStatsDisplay() {
     Object.keys(expectedStats).forEach(stat => {
         const input = document.getElementById(stat);
         if (input && stat !== 'aggressiveness') {
-            input.placeholder = `預期: ${expectedStats[stat].toFixed(1)}`;
+            input.placeholder = `Dự kiến: ${expectedStats[stat].toFixed(1)}`;
         }
     });
 }
@@ -289,7 +289,7 @@ function calculateExpectedStats(pet, level) {
 // 計算寵物屬性
 function calculatePetStats() {
     if (!selectedPet) {
-        showNotification('請先選擇一隻寵物', 'warning');
+        showNotification('Vui lòng chọn một thú cưng', 'warning');
         return;
     }
     
@@ -304,7 +304,7 @@ function calculatePetStats() {
     
     // 驗證輸入
     if (level < 1 || level > 15) {
-        showNotification('等級必須在 1-15 之間', 'error');
+        showNotification('Cấp độ phải nằm trong khoảng 1-15', 'error');
         return;
     }
     
@@ -317,25 +317,25 @@ function calculatePetStats() {
             // 設定合理上限為預期值的1.5倍（允許優質寵物）
             const maxReasonableValue = Math.ceil(expectedStats[stat] * 1.5);
             if (value > maxReasonableValue) {
-                showNotification(`${statNames[stat]}數值過高，請檢查是否正確（建議不超過${maxReasonableValue}）`, 'warning');
+                showNotification(`${statNames[stat]} quá cao, vui lòng kiểm tra (khuyến nghị không vượt quá ${maxReasonableValue})`, 'warning');
                 return;
             }
         }
         if (value < 0) {
-            showNotification(`${statNames[stat]}不能為負數`, 'error');
+            showNotification(`${statNames[stat]} không được là số âm`, 'error');
             return;
         }
     }
     
     if (Object.values(currentStats).filter((val, index) => index !== 3).every(val => val === 0)) {
-        showNotification('請輸入至少一個屬性值（積極性除外）', 'warning');
+        showNotification('Vui lòng nhập ít nhất một giá trị thuộc tính (ngoại trừ Tính tích cực)', 'warning');
         return;
     }
     
     const analysis = analyzeStats(pet, level, currentStats, expectedStats);
     
     displayResults(pet, level, currentStats, expectedStats, analysis);
-    showNotification('計算完成！', 'success');
+    showNotification('Hoàn tất tính toán!', 'success');
 }
 
 // 分析屬性
@@ -481,13 +481,13 @@ function displayResults(pet, level, currentStats, expectedStats, analysis) {
     const comparisonGrid = document.querySelector('.comparison-grid');
     comparisonGrid.innerHTML = `
         <div class="stat-row header">
-            <div>屬性</div>
-            <div>當前值</div>
-            <div>基礎值</div>
-            <div>成長值</div>
-            <div>期望值</div>
-            <div>角色加成</div>
-            <div>評價</div>
+            <div>Thuộc tính</div>
+            <div>Giá trị hiện tại</div>
+            <div>Giá trị cơ bản</div>
+            <div>Tăng trưởng</div>
+            <div>Giá trị dự kiến</div>
+            <div>Hiệu ứng nhân vật</div>
+            <div>Đánh giá</div>
         </div>
     `;
     

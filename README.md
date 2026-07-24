@@ -1,6 +1,6 @@
-# 🐾 天堂W 寵物屬性評價器
+# 🐾 LineageW Bộ đánh giá thuộc tính thú cưng
 
-> 一個專為天堂W設計的現代化寵物屬性計算與評價工具，採用One Dark Pro暗黑主題，幫助玩家精準評估寵物成長潛力。
+> Công cụ tính và đánh giá thuộc tính thú cưng dành cho LineageW, giao diện One Dark Pro, giúp người chơi đánh giá chính xác tiềm năng tăng trưởng của thú cưng.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/version-2.1.0-green.svg)
@@ -9,21 +9,21 @@
 
 ## ✨ 功能特色
 
-- 🖼️ **寵物圖片顯示**：真實寵物圖片替代emoji圖標
-- 🎨 **One Dark Pro主題**：現代化暗黑風格介面設計
-- 🐺 **四種寵物支援**：狼、杜賓狗、牧羊犬、小獵犬
-- 📊 **智能屬性分析**：基於官方機率的精準計算
-- ⭐ **主屬性加權**：主屬性1.5倍權重評分系統
-- 🎯 **動態評價等級**：五級評價系統配合色彩標示
-- 📱 **完全響應式**：支援所有裝置的最佳顯示
-- 💡 **即時預期值**：輸入時顯示屬性預期值提示
-- 🎮 **角色加成計算**：顯示對角色能力的具體加成
-- 🔔 **現代通知系統**：替代傳統alert的美觀提示
+- 🖼️ **Hiển thị ảnh thú cưng**: dùng ảnh thật thay cho emoji
+- 🎨 **Giao diện One Dark Pro**: phong cách nền tối hiện đại
+- 🐺 **Hỗ trợ 4 loại thú cưng**: Sói, Doberman, Chó chăn cừu, Beagle
+- 📊 **Phân tích thuộc tính thông minh**: tính toán dựa trên xác suất chính thức
+- ⭐ **Trọng số thuộc tính chính**: thuộc tính chính được nhân hệ số 1.5
+- 🎯 **Hệ thống đánh giá động**: 5 bậc đánh giá kèm màu sắc
+- 📱 **Hoàn toàn responsive**: hiển thị tốt trên mọi thiết bị
+- 💡 **Hiển thị giá trị dự kiến theo thời gian thực**: hiển thị giá trị dự kiến khi nhập
+- 🎮 **Tính toán hiệu ứng nhân vật**: hiển thị tác dụng lên nhân vật từ thuộc tính
+- 🔔 **Hệ thống thông báo hiện đại**: thay thế alert truyền thống
 - 📖 **分頁式說明**：詳細的使用說明和計算邏輯
 - 🌐 **無需安裝**：純前端應用，開啟即用
 - 📊 **Google Analytics 4**：流量分析與用戶行為追蹤
 
-## 🚀 快速開始
+## 🚀 Bắt đầu nhanh
 
 ### 本地運行
 ```bash

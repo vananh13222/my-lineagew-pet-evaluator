@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>天堂W 寵物屬性計算器 - 專業寵物成長評估工具</title>
-    <meta name="description" content="天堂W寵物屬性計算器 - 專業的寵物成長潛力評估工具，支援狼、杜賓狗、牧羊犬、小獵犬四種寵物類型，智能分析屬性成長，提供詳細評價建議。">
+    <title>LineageW Bộ tính thuộc tính thú cưng - Công cụ đánh giá tăng trưởng</title>
+    <meta name="description" content="Bộ tính thuộc tính thú cưng cho LineageW - công cụ đánh giá tiềm năng tăng trưởng, hỗ trợ Sói, Doberman, Chó chăn cừu, Beagle. Phân tích thuộc tính thông minh và đưa ra đề xuất chi tiết.">
     <meta name="keywords" content="天堂W,寵物計算器,屬性評價,成長分析,Lineage W">
     <meta name="author" content="Orien">
     <!-- Favicon -->
@@ -36,8 +36,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>🐾 天堂W 寵物屬性計算器</h1>
-            <p class="subtitle">計算您的寵物成長潛力與評價</p>
+            <h1>🐾 LineageW Bộ tính thuộc tính thú cưng</h1>
+            <p class="subtitle">Tính toán tiềm năng tăng trưởng và đánh giá thú cưng của bạn</p>
         </header>
 
         <!-- 📢 公告欄位 -->
@@ -45,7 +45,7 @@
             <div class="announcement-header" id="announcementToggle">
                 <div class="announcement-title">
                     <span class="announcement-icon">📢</span>
-                    <h3>系統公告</h3>
+                    <h3>Thông báo hệ thống</h3>
                     <span class="announcement-badge">NEW</span>
                 </div>
                 <span class="toggle-arrow">▼</span>
@@ -54,15 +54,15 @@
                 <div class="announcement-item">
                     <div class="announcement-date">2025/06/06</div>
                     <div class="announcement-text">
-                        <strong>🚀 網站搬家通知｜請更新你的書籤！</strong>
-                        你好，我是 Orion。<br>
-                        為了提供更穩定、更快速的使用體驗，我們的網站已正式遷移至新網址：<br>
-                        👉 新網站網址：<br>
+                        <strong>🚀 Thông báo di chuyển trang web｜Vui lòng cập nhật dấu trang!</strong>
+                        Xin chào, tôi là Orion.<br>
+                        Để mang đến trải nghiệm ổn định và nhanh hơn, trang web của chúng tôi đã chuyển sang địa chỉ mới:<br>
+                        👉 Địa chỉ trang mới：<br>
                         🔗 <a href="https://lineagew-labs.orionlabs.pro/" target="_blank">https://lineagew-labs.orionlabs.pro/</a>
                         <br>
-                        請記得更新你的書籤或收藏連結，新站點將持續提供最新功能與更順暢的操作體驗！
+                        Vui lòng cập nhật dấu trang của bạn. Trang mới sẽ cung cấp tính năng mới và trải nghiệm mượt hơn!
                         <br>
-                        如有任何問題或建議，歡迎在頁面下方的回報連結留言給我，謝謝你的支持！
+                        Nếu có câu hỏi hoặc góp ý, hãy để lại phản hồi tại liên kết báo lỗi phía dưới. Cảm ơn sự ủng hộ của bạn!
                         2025/06/14<br>
                         Orion<br>
                     </div>
@@ -79,27 +79,27 @@
         <div class="main-content">
             <!-- 寵物選擇區 -->
             <section class="pet-selection" role="radiogroup" aria-labelledby="pet-selection-title">
-                <h2 id="pet-selection-title">選擇寵物</h2>
+                <h2 id="pet-selection-title">Chọn thú cưng</h2>
                 <div class="pet-grid">
                     <div class="pet-card" data-pet="wolf">
-                        <img src="wolf.png" alt="狼" class="pet-icon">
-                        <h3>狼</h3>
-                        <p>主屬：體力(HP)</p>
+                        <img src="wolf.png" alt="Sói" class="pet-icon">
+                        <h3>Sói</h3>
+                        <p>Thuộc chính: Thể lực (HP)</p>
                     </div>
                     <div class="pet-card" data-pet="dog">
-                        <img src="dubin.png" alt="杜賓狗" class="pet-icon">
-                        <h3>杜賓狗</h3>
-                        <p>主屬：忠誠心(命中)</p>
+                        <img src="dubin.png" alt="Doberman" class="pet-icon">
+                        <h3>Doberman</h3>
+                        <p>Thuộc chính: Trung thành (Chính xác)</p>
                     </div>
                     <div class="pet-card" data-pet="shepherd">
-                        <img src="sheepdog.png" alt="牧羊犬" class="pet-icon">
-                        <h3>牧羊犬</h3>
-                        <p>主屬：忍耐力(物防)</p>
+                        <img src="sheepdog.png" alt="Chó chăn cừu" class="pet-icon">
+                        <h3>Chó chăn cừu</h3>
+                        <p>Thuộc chính: Sức bền (Phòng thủ vật lý)</p>
                     </div>
                     <div class="pet-card" data-pet="hound">
-                        <img src="beagle.png" alt="小獵犬" class="pet-icon">
-                        <h3>小獵犬</h3>
-                        <p>主屬：速度(迴避)</p>
+                        <img src="beagle.png" alt="Beagle" class="pet-icon">
+                        <h3>Beagle</h3>
+                        <p>Thuộc chính: Tốc độ (Tránh né)</p>
                     </div>
                 </div>
             </section>
@@ -107,58 +107,58 @@
             <!-- 輸入區 -->
             <section class="input-section">
                 <div class="input-group">
-                    <label for="level">寵物等級</label>
+                    <label for="level">Cấp thú cưng</label>
                     <input type="number" id="level" min="1" max="15" value="1">
                 </div>
 
                 <div class="stats-input">
                     <div class="stats-header">
-                        <h3>當前屬性值</h3>
-                        <button id="help-btn" class="help-btn">❓ 使用說明</button>
+                    <h3>Giá trị thuộc tính hiện tại</h3>
+                    <button id="help-btn" class="help-btn">❓ Hướng dẫn</button>
                     </div>
 
                     <div class="warning">
-                        ⚠️ 請記得扣除技能加成的屬性點數
+                        ⚠️ Vui lòng trừ đi các điểm thuộc tính từ kỹ năng/trang bị
                     </div>
                     
                     <div class="stats-grid">
                         <div class="stat-input">
-                            <label for="endurance">忍耐力</label>
-                            <small class="stat-desc">5點=1物防</small>
+                            <label for="endurance">Sức bền</label>
+                            <small class="stat-desc">5 điểm = +1 phòng thủ vật lý</small>
                             <input type="number" id="endurance" min="0" value="0">
                         </div>
                         <div class="stat-input">
-                            <label for="loyalty">忠誠心</label>
-                            <small class="stat-desc">5點=1近/遠/魔命中</small>
+                            <label for="loyalty">Trung thành</label>
+                            <small class="stat-desc">5 điểm = +1 chính xác (tấn công)</small>
                             <input type="number" id="loyalty" min="0" value="0">
                         </div>
                         <div class="stat-input">
-                            <label for="speed">速度</label>
-                            <small class="stat-desc">10點=1近/遠迴避</small>
+                            <label for="speed">Tốc độ</label>
+                            <small class="stat-desc">10 điểm = +1 né tránh</small>
                             <input type="number" id="speed" min="0" value="0">
                         </div>
                         <div class="stat-input">
-                            <label for="aggressiveness">積極性</label>
-                            <small class="stat-desc">3點=1攻擊力</small>
+                            <label for="aggressiveness">Tính tích cực</label>
+                            <small class="stat-desc">Giá trị mặc định: 3</small>
                             <input type="number" id="aggressiveness" min="0" value="3" disabled>
-                            <small>※積極性固定為3，不會升級</small>
+                            <small>※Tính tích cực cố định ở 3, không tăng khi lên cấp</small>
                         </div>
                         <div class="stat-input">
-                            <label for="hp">體力</label>
-                            <small class="stat-desc">1點=30HP</small>
+                            <label for="hp">Thể lực</label>
+                            <small class="stat-desc">1 điểm = +30 HP</small>
                             <input type="number" id="hp" min="0" value="0">
                         </div>
                     </div>
                 </div>
 
                 <div class="button-group">
-                    <button id="calculate" class="calculate-btn">🧮 計算屬性評價</button>
+                    <button id="calculate" class="calculate-btn">🧮 Tính đánh giá thuộc tính</button>
                 </div>
             </section>
 
             <!-- 結果顯示區 -->
             <section class="result-section" id="results" style="display: none;">
-                <h2>計算結果</h2>
+                <h2>Kết quả tính</h2>
                 
                 <div class="pet-info">
                     <div class="selected-pet-display">
@@ -171,12 +171,12 @@
                 <div class="stats-comparison">
                     <div class="comparison-grid">
                         <div class="stat-row header">
-                            <div>屬性</div>
-                            <div>當前值</div>
-                            <div>基礎值</div>
-                            <div>成長值</div>
-                            <div>角色加成</div>
-                            <div>評價</div>
+                            <div>Thuộc tính</div>
+                            <div>Giá trị hiện tại</div>
+                            <div>Giá trị cơ bản</div>
+                            <div>Tăng trưởng</div>
+                            <div>Hiệu ứng nhân vật</div>
+                            <div>Đánh giá</div>
                         </div>
                     </div>
                 </div>
@@ -194,47 +194,47 @@
             <div id="help-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 id="modal-title">🐾 使用說明</h2>
+                        <h2 id="modal-title">🐾 Hướng dẫn sử dụng</h2>
                         <span class="close" aria-label="關閉說明視窗">&times;</span>
                     </div>
                     <div class="modal-body">
                         <!-- 標籤按鈕 -->
                         <div class="help-tabs">
-                            <button class="help-tab-btn active" data-tab="usage-tab">使用方法</button>
-                            <button class="help-tab-btn" data-tab="calculation-tab">計算原理</button>
-                            <button class="help-tab-btn" data-tab="rating-tab">評價等級</button>
+                            <button class="help-tab-btn active" data-tab="usage-tab">Cách sử dụng</button>
+                            <button class="help-tab-btn" data-tab="calculation-tab">Nguyên lý tính toán</button>
+                            <button class="help-tab-btn" data-tab="rating-tab">Hạng đánh giá</button>
                         </div>
 
                         <!-- 使用方法標籤 -->
                         <div class="help-tab-content active" id="usage-tab">
-                            <h3>🚀 使用步驟</h3>
+                            <h3>🚀 Các bước sử dụng</h3>
                             <div class="steps">
                                 <div class="step-item">
                                     <span class="step-num">1</span>
-                                    <div>選擇您的寵物類型</div>
+                                <div>Chọn loại thú cưng của bạn</div>
                                 </div>
                                 <div class="step-item">
                                     <span class="step-num">2</span>
-                                    <div>輸入寵物等級（1-15）</div>
+                                <div>Nhập cấp thú cưng (1-15)</div>
                                 </div>
                                 <div class="step-item">
                                     <span class="step-num">3</span>
-                                    <div>輸入各屬性數值（⚠️請扣除技能加成）</div>
+                                <div>Nhập các giá trị thuộc tính (⚠️ vui lòng trừ điểm từ kỹ năng/trang bị)</div>
                                 </div>
                                 <div class="step-item">
                                     <span class="step-num">4</span>
-                                    <div>點擊計算按鈕查看評價</div>
+                                <div>Nhấn nút tính để xem đánh giá</div>
                                 </div>
                             </div>
 
                             <h3>🎯 寵物基礎數據</h3>
                             <table class="base-table">
                                 <tr>
-                                    <th>寵物</th>
-                                    <th>忍耐力</th>
-                                    <th>忠誠心</th>
-                                    <th>速度</th>
-                                    <th>體力</th>
+                                    <th>Thú cưng</th>
+                                    <th>Sức bền</th>
+                                    <th>Trung thành</th>
+                                    <th>Tốc độ</th>
+                                    <th>Thể lực</th>
                                 </tr>
                                 <tr>
                                     <td><img src="wolf.png" alt="狼" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 5px; vertical-align: middle;"> 狼</td>
@@ -269,7 +269,7 @@
 
                         <!-- 計算原理標籤 -->
                         <div class="help-tab-content" id="calculation-tab">
-                            <h3>🧮 計算原理</h3>
+                            <h3>🧮 Nguyên lý tính toán</h3>
                             <div class="calc-section">
                                 <h4>升級機率</h4>
                                 <div class="probability-section">
@@ -303,42 +303,42 @@
 
                         <!-- 評價等級標籤 -->
                         <div class="help-tab-content" id="rating-tab">
-                            <h3>🏆 評價等級</h3>
+                            <h3>🏆 Hạng đánh giá</h3>
                             <div class="rating-list">
                                 <div class="rating-item excellent">
-                                    <span class="rating-badge">頂級</span>
+                                <span class="rating-badge">Tuyệt đỉnh</span>
                                     <div class="rating-info">
-                                        <strong>≥140%</strong> - 神級寵物，極品成長
+                                    <strong>≥140%</strong> - Thú cưng hàng đầu, tăng trưởng xuất sắc
                                     </div>
                                 </div>
                                 <div class="rating-item excellent">
-                                    <span class="rating-badge">優秀</span>
+                                <span class="rating-badge">Xuất sắc</span>
                                     <div class="rating-info">
-                                        <strong>120-139%</strong> - 品質優良，推薦培養
+                                    <strong>120-139%</strong> - Chất lượng cao, khuyến nghị nuôi dưỡng
                                     </div>
                                 </div>
                                 <div class="rating-item good">
-                                    <span class="rating-badge">良好</span>
+                                <span class="rating-badge">Tốt</span>
                                     <div class="rating-info">
-                                        <strong>105-119%</strong> - 超出預期，值得培養
+                                    <strong>105-119%</strong> - Vượt kỳ vọng, đáng nuôi dưỡng
                                     </div>
                                 </div>
                                 <div class="rating-item average">
-                                    <span class="rating-badge">普通</span>
+                                <span class="rating-badge">Bình thường</span>
                                     <div class="rating-info">
-                                        <strong>100-104%</strong> - 合乎預期，可正常使用
+                                    <strong>100-104%</strong> - Đạt kỳ vọng, có thể sử dụng
                                     </div>
                                 </div>
                                 <div class="rating-item average">
-                                    <span class="rating-badge">待加強</span>
+                                <span class="rating-badge">Cần cải thiện</span>
                                     <div class="rating-info">
-                                        <strong>85-99%</strong> - 低於平均，建議強化或替換
+                                    <strong>85-99%</strong> - Dưới trung bình, khuyến nghị cải thiện hoặc thay thế
                                     </div>
                                 </div>
                                 <div class="rating-item poor">
-                                    <span class="rating-badge">不佳</span>
+                                <span class="rating-badge">Kém</span>
                                     <div class="rating-info">
-                                        <strong><85%</strong> - 明顯不佳，建議重練
+                                    <strong><85%</strong> - Rất kém, khuyến nghị huấn luyện lại
                                     </div>
                                 </div>
                             </div>
