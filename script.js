@@ -116,19 +116,19 @@ function closeNotification(notification) {
     }, 300);
 }
 
-// 計算角色加成
+// Tính hiệu ứng nhân vật
 function calculateCharacterBonus(statName, value) {
     switch(statName) {
         case 'endurance':
-            return `+${Math.floor(value / 5)} 物理防禦`;
+            return `+${Math.floor(value / 5)} Phòng thủ vật lý`;
         case 'loyalty':
-            return `+${Math.floor(value / 5)} 命中`;
+            return `+${Math.floor(value / 5)} Chính xác`;
         case 'speed':
-            return `+${Math.floor(value / 10)} 迴避`;
+            return `+${Math.floor(value / 10)} Né tránh`;
         case 'hp':
             return `+${value * 30} HP`;
         case 'aggressiveness':
-            return '無加成';
+            return 'Không có tác dụng';
         default:
             return '';
     }
@@ -352,54 +352,53 @@ function analyzeStats(pet, level, currentStats, expectedStats) {
             const growthValue = currentValue - baseValue;
             
             let rating, ratingClass, score;
-            
-            // 積極性特殊處理
+            // Tính tích cực đặc biệt xử lý
             if (stat === 'aggressiveness') {
-                rating = '固定值';
+                rating = 'Giá trị cố định';
                 ratingClass = 'rating-good';
-                score = 70; // 給予中等分數，但不影響平均
+                score = 70; // Cho điểm trung bình, không ảnh hưởng đến trung bình
             } else {
-                // 修正：計算成長率 (相對於預期值)，防止除零錯誤
+                // Sửa: Tính tỷ lệ tăng trưởng (tương đối với giá trị dự kiến), tránh lỗi chia cho 0
                 let growthRate;
                 if (expectedValue > baseValue) {
                     growthRate = (currentValue - baseValue) / (expectedValue - baseValue);
                 } else {
-                    // 如果預期值等於基礎值（等級1的情況），直接比較當前值與基礎值
+                    // Nếu giá trị dự kiến bằng giá trị cơ bản (trường hợp cấp 1), so sánh trực tiếp giá trị hiện tại và cơ bản
                     growthRate = currentValue >= baseValue ? 1 : 0.5;
                 }
                 
-                // 防止負成長率異常情況
+                // Tránh trường hợp bất thường với tỷ lệ tăng trưởng âm
                 if (growthRate < 0) {
                     growthRate = 0;
                 }
                 
                 if (growthRate >= 1.4) {
-                    rating = '頂級';
+                    rating = 'Tuyệt đỉnh';
                     ratingClass = 'rating-excellent';
                     score = 100;
                 } else if (growthRate >= 1.2) {
-                    rating = '優秀';
+                    rating = 'Xuất sắc';
                     ratingClass = 'rating-excellent';
                     score = 85;
                 } else if (growthRate >= 1.05) {
-                    rating = '良好';
+                    rating = 'Tốt';
                     ratingClass = 'rating-good';
                     score = 70;
                 } else if (growthRate >= 1.0) {
-                    rating = '普通';
+                    rating = 'Bình thường';
                     ratingClass = 'rating-average';
                     score = 55;
                 } else if (growthRate >= 0.85) {
-                    rating = '待加強';
+                    rating = 'Cần cải thiện';
                     ratingClass = 'rating-average';
                     score = 40;
                 } else {
-                    rating = '不佳';
+                    rating = 'Kém';
                     ratingClass = 'rating-poor';
                     score = 30;
                 }
                 
-                // 主屬性加權
+                // Trọng số thuộc tính chính
                 if (stat === pet.mainStat) {
                     score *= 1.5;
                 }
@@ -422,30 +421,30 @@ function analyzeStats(pet, level, currentStats, expectedStats) {
         }
     });
     
-    // 計算整體評價（排除積極性）
+    // Tính đánh giá tổng thể (loại trừ tính tích cực)
     const averageScore = validStats > 0 ? totalScore / validStats : 0;
     let overallRating, overallClass, description;
     
     if (averageScore >= 95) {
-        overallRating = '神級寵物';
+        overallRating = 'Thú đỉnh';
         overallClass = 'excellent';
-        description = '恭喜！這是一隻極品寵物，屬性成長非常優秀，值得大力培養！';
+        description = 'Chúc mừng! Đây là một thú cưng cực phẩm, tăng trưởng thuộc tính rất xuất sắc, xứng đáng đầu tư!';
     } else if (averageScore >= 80) {
-        overallRating = '優質寵物';
+        overallRating = 'Thú chất lượng cao';
         overallClass = 'excellent';
-        description = '這是一隻品質很好的寵物，屬性成長超出平均水準，推薦繼續培養。';
+        description = 'Đây là một thú cưng chất lượng tốt, tăng trưởng thuộc tính vượt mức trung bình, khuyến nghị tiếp tục nuôi dưỡng.';
     } else if (averageScore >= 65) {
-        overallRating = '普通寵物';
+        overallRating = 'Thú bình thường';
         overallClass = 'good';
-        description = '這隻寵物的屬性成長合乎預期，可正常使用。';
+        description = 'Thú cưng này có tăng trưởng thuộc tính đạt kỳ vọng, có thể sử dụng bình thường.';
     } else if (averageScore >= 50) {
-        overallRating = '待加強';
+        overallRating = 'Cần cải thiện';
         overallClass = 'average';
-        description = '這隻寵物的成長低於平均，建議強化或尋找更好的替代。';
+        description = 'Thú cưng này có tăng trưởng dưới trung bình, khuyến nghị tăng cường hoặc tìm thay thế tốt hơn.';
     } else {
-        overallRating = '品質不佳';
+        overallRating = 'Chất lượng kém';
         overallClass = 'poor';
-        description = '這隻寵物的屬性成長明顯不佳，建議重新培養或更換寵物。';
+        description = 'Tăng trưởng thuộc tính của thú cưng này rõ ràng không đạt, khuyến nghị huấn luyện lại hoặc thay thế.';
     }
     
     return {
