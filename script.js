@@ -75,11 +75,11 @@ const upgradeRates = {
 
 // 屬性名稱對應
 const statNames = {
-    endurance: 'Sức bền',
+    endurance: 'Bền Bỉ',
     loyalty: 'Trung thành',
     speed: 'Tốc độ',
     aggressiveness: 'Tính tích cực',
-    hp: 'Thể lực'
+    hp: 'HP'
 };
 
 // 現代通知系統
