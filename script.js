@@ -511,7 +511,7 @@ function displayResults(pet, level, currentStats, expectedStats, analysis) {
         comparisonGrid.appendChild(statRow);
     });
     
-    // 顯示整體評價
+    // Hiển thị đánh giá tổng thể
     const ratingBadge = document.querySelector('.rating-badge');
     const ratingDescription = document.querySelector('.rating-description');
     
